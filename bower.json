@@ -1,10 +1,11 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
-  "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
+  "name": "serpskij",
+  "description": "Cards app for learning serbian language",
+  "version": "0.0.1",
+  "homepage": "https://github.com/zergeugenson/srpskij",
+  "git_url": "https://github.com/zergeugenson/srpskij.git",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "dependencies": {
     "angular": "~1.5.0",
     "angular-route": "~1.5.0",

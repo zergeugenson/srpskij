@@ -1,17 +1,17 @@
 'use strict';
 
-var ryleev = angular.module('Ryleev', [ 'ngRoute' ])
+var card = angular.module('Card', [ 'ngRoute' ])
   .value(
     'screen', {
     width: document.documentElement.clientWidth,
     height: document.documentElement.clientHeight
   }
 )
-.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+.config(['$routeProvider', '$locationProvider', function($routeProvider) {
   $routeProvider.
     when('/', {
       templateUrl: 'templates/card.html',
-      controller: 'LentaCtrl'
+      controller: 'ShowCards'
     })
     .otherwise({
       redirectTo: '/'

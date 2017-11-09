@@ -1,24 +1,10 @@
 'use strict';
 
-ryleev.controller('LentaCtrl', function ($scope, $window, $rootScope, $routeParams, $location, $timeout, screen ) {
-	console.log('Start lenta', $scope);
-	$scope.tiles = [
-		{
-			id:0,
-			title:"первый"
-		},
-		{
-			id:1,
-			title:"второй",
-			img:"img/jlp.jpg"
-		},
-		{
-			id:2,
-			title:"третий"
-		},
-		{
-			id:3,
-			title:"четвертый"
-		}
-	]
+card.controller('ShowCards', function ($scope, $window, $rootScope, $routeParams, getDatas, $location, $timeout, screen ) {
+	getDatas(['datas/words.json']).then(function (data) {
+		$scope.words = data[0].vocabulary;
+		console.dir($scope.words);
+	}, function(error){
+		console.log('error', error)
+	})
 });
