@@ -10,7 +10,7 @@ var ryleev = angular.module('Ryleev', [ 'ngRoute' ])
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $routeProvider.
     when('/', {
-      templateUrl: 'templates/lenta.html',
+      templateUrl: 'templates/card.html',
       controller: 'LentaCtrl'
     })
     .otherwise({
