@@ -1,0 +1,54 @@
+.lenta_container {
+	width:100%;
+	max-width: 1024px;
+	background-color:#fefefe;
+	height:100%;
+	margin:0 auto;
+}
+
+.grid_container {
+	position: relative;
+}
+.grid_container .grid {
+	width: 33.3333%;
+	padding-top: 30%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color:#f0f0f0;
+	display: inline-block;
+	height: auto;
+	overflow: hidden;
+	position: relative;
+	vertical-align: top;
+	text-align: center;
+
+}
+.tile-header {
+	z-index: 5;
+	padding: 0;
+	position: absolute;
+	top: 10px;
+	left: 25px;
+	right: 25px;
+}
+.tile-wrapper {
+	height: 100%;
+	left: 0;
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 3;
+	border: none!important;
+}
+.tile-picture {
+	bottom: -9999px;
+	height: 100%;
+	left: -9999px;
+	margin: auto;
+	position: absolute;
+	right: -9999px;
+	top: -9999px;
+	width: auto;
+	border: none!important;
+}
