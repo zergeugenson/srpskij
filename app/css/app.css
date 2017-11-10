@@ -1,54 +1,125 @@
-.lenta_container {
+body, html {
 	width:100%;
-	max-width: 1024px;
-	background-color:#fefefe;
 	height:100%;
+}
+body {
+	position:relative;
+	font-size: 12px;
+	line-height: 14px;
+	color:#000;
+}
+.main-container {
+	width:100%;
+	height:100%;
+	background: #f0f0f0;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+	align-items:stretch;
+}
+.main-container>div {
+	flex:5% 1 0;
+}
+.menu {
+	display:flex;
+	justify-content:space-around;
+	padding-top:5px;
+}
+div.card-container {
+	flex:95% 0 1;
+	position:relative;
+
+}
+.card-body {
+	width:250px;
+	height:360px;
+	position:absolute;
+	border:1px solid #777;
+	background:#fff;
+	top:50%;
+	margin: -180px auto 0 auto;
+	left:0;
+	right:0;
+
+}
+
+div.card-body button {
+	position:absolute;
+	flex:none;
+	border:1px solid #777;
+	display:block;
+	padding:0;
+	margin:0;
+}
+div.card-body button.action-back {
+	left:0;
+}
+div.card-body button.action-next {
+	right:0;
+}
+div.card-body button.action-next, div.card-body button.action-back {
+	width:50px;
+	height:100%;
+	top:0;
+	background:transparent;
+	border:none;
+}
+div.card-body button.action-next:after, div.card-body button.action-back:after {
+	content:">";
+	display:block;
+	font-size:24px;
+	width:40px;
+	height:40px;
+	background: rgba(0,0,0,0.03);
+	color:rgba(0,0,0,0.3);
+	line-height:34px;
+	overflow:hidden;
+	margin:auto;
+}
+div.card-body button.action-back:after {
+	content:"<";
+}
+div.card-body button.action-done {
+	left:0;
+	right:0;
 	margin:0 auto;
+	bottom:30px;
+	width:40px;
+	height:40px;
 }
-
-.grid_container {
-	position: relative;
-}
-.grid_container .grid {
-	width: 33.3333%;
-	padding-top: 30%;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-color:#f0f0f0;
-	display: inline-block;
-	height: auto;
-	overflow: hidden;
-	position: relative;
-	vertical-align: top;
+.card-word {
+	font-size: 32px;
+	margin-top: 80px;
 	text-align: center;
-
 }
-.tile-header {
-	z-index: 5;
-	padding: 0;
-	position: absolute;
-	top: 10px;
-	left: 25px;
-	right: 25px;
+.card-word span.accentuation {
+	color:red;
+	font-weight:bold;
+	position:relative;
 }
-.tile-wrapper {
-	height: 100%;
-	left: 0;
-	opacity: 1;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	z-index: 3;
-	border: none!important;
+.card-word span.accentuation:after {
+	position:absolute;
+	top:7px;
+	left:0;
 }
-.tile-picture {
-	bottom: -9999px;
-	height: 100%;
-	left: -9999px;
-	margin: auto;
-	position: absolute;
-	right: -9999px;
-	top: -9999px;
-	width: auto;
-	border: none!important;
+.card-word span.accentuation.su:after {
+	content:"``";
+	letter-spacing:-3px;
+}
+.card-word span.accentuation.sd:after {
+	content:"`";
+	left:3px;
+}
+.card-word span.accentuation.lu:after {
+	content:"'";
+	left: 7px;
+	transform: rotate(41deg);
+	top: 5px;
+}
+.card-word span.accentuation.ld:after {
+	content:"^";
+	transform: scaleY(0.4);
+	top: 2px;
+	font-size: 26px;
+	left: 1px;
 }
